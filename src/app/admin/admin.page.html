@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let f of users">
+    <ion-item>
+      <ion-label>
+        nombre: {{f.nombre}}
+      </ion-label>
+      <ion-label>
+        Rut: {{f.rut}}
+      </ion-label>
+      <ion-label>
+        Edad: {{f.edad}}
+      </ion-label>
+      <ion-label>
+        Direccion: {{f.direccion}}
+      </ion-label>
+      <ion-label>
+        Correo: {{f.correo}}
+      </ion-label>
+      <ion-label>
+        Contrasena {{f.contrasena}}
+      </ion-label>
+      <ion-label>
+        Telefono: {{f.telefono}}
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <br>
+  <button (click)="logout()">
+    Salir
+  </button>
+</ion-content>

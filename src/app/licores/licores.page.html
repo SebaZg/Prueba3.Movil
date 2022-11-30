@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Licores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of getdata.drinks">
+    <img src="{{item.strDrinkThumb}}" alt="no resulto">
+    <ion-card-header>
+      <ion-card-title>{{item.idDrink}}</ion-card-title>
+      <ion-card-subtitle>{{item.strDrink}}</ion-card-subtitle>
+      <ion-card-content>{{item.strCategory}}</ion-card-content>
+  </ion-card-header>
+  </ion-card>
+  <br>
+  <button (click)="logout()">
+    Salir
+  </button>
+</ion-content>
